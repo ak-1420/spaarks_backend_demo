@@ -1,0 +1,731 @@
+{
+	"info": {
+		"_postman_id": "759dbb43-44c3-4901-9687-43b7b9a6fa87",
+		"name": "Spaarks Assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create a restaurant",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Mission Chinese Food\",\r\n    \"description\": \"Mission Chinese Food has grown up from its scrappy Orchard Street days into a big, two story restaurant equipped with a pizza oven, a prime rib cart, and a much broader menu. Yes, it still has all the hits — the kung pao pastrami, the thrice cooked bacon —but chef/proprietor Danny Bowien and executive chef Angela Dimayuga have also added a raw bar, two generous family-style set menus, and showstoppers like duck baked in clay. And you can still get a lot of food without breaking the bank.\",\r\n    \"location\":{\r\n        \"lattitude\": 40.713829,\r\n        \"longitude\": -73.989667\r\n    },\r\n    \"ratings\":[1.5 , 2 , 4 , 3]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/v0/restaurant",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"v0",
+						"restaurant"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "create a restaurant",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Mission Chinese Food\",\r\n    \"description\": \"Mission Chinese Food has grown up from its scrappy Orchard Street days into a big, two story restaurant equipped with a pizza oven, a prime rib cart, and a much broader menu. Yes, it still has all the hits — the kung pao pastrami, the thrice cooked bacon —but chef/proprietor Danny Bowien and executive chef Angela Dimayuga have also added a raw bar, two generous family-style set menus, and showstoppers like duck baked in clay. And you can still get a lot of food without breaking the bank.\",\r\n    \"location\":{\r\n        \"lattitude\": 40.713829,\r\n        \"longitude\": -73.989667\r\n    },\r\n    \"ratings\":[1.5 , 2 , 4 , 3]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/v0/restaurant",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v0",
+								"restaurant"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "801"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"321-MsOEwR77/Rqa/8SsrsY05HJc0j8\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 04 Dec 2021 16:31:00 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"restuarant created successfully!\",\n    \"data\": {\n        \"name\": \"Mission Chinese Food\",\n        \"description\": \"Mission Chinese Food has grown up from its scrappy Orchard Street days into a big, two story restaurant equipped with a pizza oven, a prime rib cart, and a much broader menu. Yes, it still has all the hits — the kung pao pastrami, the thrice cooked bacon —but chef/proprietor Danny Bowien and executive chef Angela Dimayuga have also added a raw bar, two generous family-style set menus, and showstoppers like duck baked in clay. And you can still get a lot of food without breaking the bank.\",\n        \"location\": {\n            \"lattitude\": \"40.713829\",\n            \"longitude\": \"-73.989667\"\n        },\n        \"ratings\": [\n            1.5,\n            2,\n            4,\n            3\n        ],\n        \"_id\": \"61ab97c4777b4510d25bfc74\",\n        \"createdAt\": \"2021-12-04T16:31:00.376Z\",\n        \"updatedAt\": \"2021-12-04T16:31:00.376Z\",\n        \"__v\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "update a restaurant",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Mission Chinese Food\",\r\n    \"description\": \"Chinese food\",\r\n    \"location\":{\r\n        \"lattitude\": 40.713829,\r\n        \"longitude\": -73.989667\r\n    },\r\n    \"ratings\":[1.5 , 2 , 4 , 3]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/v0/restaurant/61ab97c4777b4510d25bfc74",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"v0",
+						"restaurant",
+						"61ab97c4777b4510d25bfc74"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "update a restaurant",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Mission Chinese Food\",\r\n    \"description\": \"Chinese food\",\r\n    \"location\":{\r\n        \"lattitude\": 40.713829,\r\n        \"longitude\": -73.989667\r\n    },\r\n    \"ratings\":[1.5 , 2 , 4 , 3]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/v0/restaurant/61ab97c4777b4510d25bfc74",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v0",
+								"restaurant",
+								"61ab97c4777b4510d25bfc74"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "145"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"91-qyIwX5UoX4twzHuP+sAH1+/bOkM\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 04 Dec 2021 16:41:40 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"the restaurant has been updated\",\n    \"data\": {\n        \"acknowledged\": true,\n        \"modifiedCount\": 1,\n        \"upsertedId\": null,\n        \"upsertedCount\": 0,\n        \"matchedCount\": 1\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "fetch a restaurant",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/api/v0/restaurant/61ab97c4777b4510d25bfc74",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"v0",
+						"restaurant",
+						"61ab97c4777b4510d25bfc74"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "fetch a restaurant",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/v0/restaurant/61ab97c4777b4510d25bfc74",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v0",
+								"restaurant",
+								"61ab97c4777b4510d25bfc74"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "317"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"13d-djBZdr9gAsavu3NI9w21WIXXqz0\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 04 Dec 2021 16:46:00 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"restaurant fetched successfully!\",\n    \"data\": {\n        \"location\": {\n            \"lattitude\": \"40.713829\",\n            \"longitude\": \"-73.989667\"\n        },\n        \"_id\": \"61ab97c4777b4510d25bfc74\",\n        \"name\": \"Mission Chinese Food\",\n        \"description\": \"Chinese food\",\n        \"ratings\": [\n            1.5,\n            2,\n            4,\n            3\n        ],\n        \"createdAt\": \"2021-12-04T16:31:00.376Z\",\n        \"updatedAt\": \"2021-12-04T16:41:39.993Z\",\n        \"__v\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "fetch all restaurants",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/api/v0/restaurant",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"v0",
+						"restaurant"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "fetch all restaurants",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/v0/restaurant",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v0",
+								"restaurant"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "725"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2d5-y3ikAe9cbAWIwRvZUOhwRSXP0Nc\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 04 Dec 2021 16:56:01 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"restaurants fetched successfully!\",\n    \"data\": [\n        {\n            \"location\": {\n                \"lattitude\": \"40.713829\",\n                \"longitude\": \"-73.989667\"\n            },\n            \"_id\": \"61ab97c4777b4510d25bfc74\",\n            \"name\": \"Mission Chinese Food\",\n            \"description\": \"Chinese food\",\n            \"ratings\": [\n                1.5,\n                2,\n                4,\n                3\n            ],\n            \"createdAt\": \"2021-12-04T16:31:00.376Z\",\n            \"updatedAt\": \"2021-12-04T16:41:39.993Z\",\n            \"__v\": 0\n        },\n        {\n            \"location\": {\n                \"lattitude\": \"40.674925\",\n                \"longitude\": \"-74.016162\"\n            },\n            \"_id\": \"61ab9c4a72b0f3caf58003a3\",\n            \"name\": \"Hometown BBQ\",\n            \"description\": \"The restaurant décor is rustic with a good amount of seats to sit and enjoy the meal. I definitely would love to come back and try that monster of a beef rib!\",\n            \"ratings\": [\n                5,\n                4.5,\n                4,\n                3,\n                2\n            ],\n            \"createdAt\": \"2021-12-04T16:50:18.105Z\",\n            \"updatedAt\": \"2021-12-04T16:50:18.105Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "delete a restaurant",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": [
+				{
+					"name": "delete a restaurant",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/v0/restaurant/61ab97c4777b4510d25bfc74",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v0",
+								"restaurant",
+								"61ab97c4777b4510d25bfc74"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "46"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2e-K3+2UxIYeYz9kOS0F8ZAwkEcTiE\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 04 Dec 2021 16:57:05 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"the restuarant has been deleted!\"\n}"
+				}
+			]
+		},
+		{
+			"name": "fetch restaurants based on location",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/v0/restaurant?lat=40.674925&lng=-74.016162&radius=500",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"v0",
+						"restaurant"
+					],
+					"query": [
+						{
+							"key": "lat",
+							"value": "40.674925"
+						},
+						{
+							"key": "lng",
+							"value": "-74.016162"
+						},
+						{
+							"key": "radius",
+							"value": "500"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "fetch restaurants based on location",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/v0/restaurant?lat=40.674925&lng=-74.016162&radius=500",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v0",
+								"restaurant"
+							],
+							"query": [
+								{
+									"key": "lat",
+									"value": "40.674925"
+								},
+								{
+									"key": "lng",
+									"value": "-74.016162"
+								},
+								{
+									"key": "radius",
+									"value": "500"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "363"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"16b-sfY8ezMcfQDz4xp7ViMnqUOfI1o\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 04 Dec 2021 17:36:31 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"fetched restaurants based on location!\",\n    \"data\": [\n        {\n            \"name\": \"Hometown BBQ\",\n            \"description\": \"The restaurant décor is rustic with a good amount of seats to sit and enjoy the meal. I definitely would love to come back and try that monster of a beef rib!\",\n            \"location\": {\n                \"lattitude\": \"40.674925\",\n                \"longitude\": \"-74.016162\"\n            },\n            \"averageRating\": 3.7,\n            \"numberOfRatings\": 5\n        }\n    ]\n}"
+				}
+			]
+		}
+	]
+}
