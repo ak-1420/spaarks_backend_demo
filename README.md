@@ -48,7 +48,7 @@ Use the following endpoint to update a restaurant
 
 ## Path Parameter
 
-### id(mandtatory) : String
+### id(mandatory) : String
 
 ## Delete a Restaurant
 Use the following endpoint to delete a restaurant
