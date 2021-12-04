@@ -6,7 +6,7 @@ restaurants crud using MongoDB and Node Js
 https://spaarks-restaurant.herokuapp.com/
 
 ## Restaurant API
-Restaurant API is used to create , update , delete and retrieve restaurants.Also, you can retreive restaurants based on the location
+Restaurant API is used to create , update , delete and retrieve restaurants.Also, you can retrieve restaurants based on the location
 with rating
 
 ## Create a Restaurant
