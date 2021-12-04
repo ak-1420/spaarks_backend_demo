@@ -57,7 +57,7 @@ Use the following endpoint to delete a restaurant
 
 ## Path Parameter
 
-### id(mandtatory) : String
+### id(mandatory) : String
 
 
 ## Fetch a Restaurant With Id
@@ -68,7 +68,7 @@ Use the following endpoint to retrieve a restaurant
 
 ## Path Parameter
 
-### id(mandtatory) : String
+### id(mandatory) : String
 
 
 ## Fetch Restaurants
