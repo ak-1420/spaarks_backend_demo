@@ -1,4 +1,6 @@
 const Restaurant = require('../models/restaurant.model')
+const Helpers = require('../helpers/distanceCalculator.helper')
+
 
 // create a restaurant
 exports.create = async (req , res) => {
@@ -87,16 +89,70 @@ exports.delete = async (req , res) => {
 // fetch all restaurants 
 
 exports.fetch = async (req , res) => {
-    
+
+
+        const lat = req.query.lat
+        const lng = req.query.lng
+        const radius = req.query.radius
+
     try {
 
         const restaurants = await Restaurant.find()
 
-        res.status(200).send({
-            message:'restaurants fetched successfully!',
-            data:restaurants
-        })
-        
+        if(lat !== undefined && lng !== undefined && radius !== undefined)
+        {
+            // return restaurants based on location
+
+            const restaurantsWithInRadius = restaurants.filter( (restaurant) => {
+                // get the restaurant location
+
+                const restaurantLat = parseFloat(restaurant.location.lattitude)
+                const restaurantLng = parseFloat(restaurant.location.longitude)
+
+                // find the distance
+
+                const distance = Helpers.getDistance(lat , lng , restaurantLat , restaurantLng)
+
+
+                // check if the distance in within in the radius
+
+                return (distance <= radius)
+            })
+           
+
+            const sumReducer = (prev , curr) => prev + curr;
+
+            const result = restaurantsWithInRadius.map((restaurant) => {
+
+                const sum = restaurant.ratings.reduce(sumReducer)
+                const len = restaurant.ratings.length
+
+                const avg = sum / len;
+
+
+                return {
+                    name: restaurant.name,
+                    description:restaurant.description,
+                    location:restaurant.location,
+                    averageRating:avg,
+                    numberOfRatings:len
+                }
+            })
+
+            res.status(200).send({
+                message:'fetched restaurants based on location!',
+                data: result
+           })
+
+        }
+        else
+        {
+              res.status(200).send({
+                   message:'restaurants fetched successfully!',
+                   data:restaurants
+              })
+        }
+ 
     } catch (error) {
 
         res.status(500).send({
