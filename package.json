@@ -1,0 +1,31 @@
+{
+  "name": "spaarks_backend_demo",
+  "version": "1.0.0",
+  "description": "restaurants crud using MongoDB and Node Js",
+  "main": "index.js",
+  "scripts": {
+    "start":"node index.js",
+    "devStart":"nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ak-1420/spaarks_backend_demo.git"
+  },
+  "author": "Arun Kumar Kalakuntla <arunkumarkalakuntla2308@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ak-1420/spaarks_backend_demo/issues"
+  },
+  "homepage": "https://github.com/ak-1420/spaarks_backend_demo#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "helmet": "^4.6.0",
+    "mongoose": "^6.0.14"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
